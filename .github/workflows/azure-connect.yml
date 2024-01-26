@@ -12,6 +12,7 @@ jobs:
     - name: Debug Azure CLI
       run: |
         echo "Azure SP Credentials:"
+        echo "Client Secret: ${{ secrets.AZURE_CLIENT_SECRET }}"
         echo "Client ID: ${{ secrets.AZURE_CLIENT_ID }}"
         echo "Tenant ID: ${{ secrets.AZURE_TENANT_ID }}"
         echo "Subscription ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}"

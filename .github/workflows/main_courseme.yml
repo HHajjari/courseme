@@ -1,5 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy CourseMe
 
@@ -7,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       tag_name:
-        description: 'Docker Image Tag'  # Description for the input
-        required: true                  # Whether the input is required or optional
-        default: 'latest'               # Default value
+        description: 'Docker Image Tag' 
+        required: true                  
+        default: 'latest'               
 
 jobs:
   build:

@@ -1,0 +1,19 @@
+name: Connect to Azure
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+  
+      - name: Set up Azure CLI
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS_SECRET_ID }}
+
+      - name: Deploy to Azure
+        run: |
+          # Your deployment commands here

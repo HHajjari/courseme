@@ -29,4 +29,4 @@ jobs:
 
       - name: Build app with pack CLI & publish to GitHub Container Registry  
         run: |  
-          pack build ${{ secrets.DOCKERHUB_USERNAME }}/courseme:${{ github.event.inputs.image_tag }} --builder paketobuildpacks/builder:tiny --path . --env "BP_JVM_VERSION=17" --publish
+          pack build ${{ secrets.DOCKERHUB_USERNAME }}/courseme:${{ github.event.inputs.tag_name }} --builder paketobuildpacks/builder:tiny --path . --env "BP_JVM_VERSION=17" --publish

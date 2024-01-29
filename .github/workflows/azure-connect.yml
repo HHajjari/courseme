@@ -9,4 +9,4 @@ jobs:
     
     steps:
     - name: Azure Login
-      run: az login -u hossein.hajjari@klm.com -p Tebyan@20100000
+      run: az login -u "hossein.hajjari@klm.com" -p "Tebyan@20100000"

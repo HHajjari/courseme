@@ -14,3 +14,9 @@ jobs:
       uses: azure/login@v1
       with:
        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Create AKS Cluster
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az aks create --resource-group c03b1bb4-a2e3-4099-85ca-a4fd9da62046 --name courseme-aks01 --node-count 2 --enable-addons monitoring --generate-ssh-keys

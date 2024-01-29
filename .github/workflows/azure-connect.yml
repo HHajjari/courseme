@@ -15,7 +15,7 @@ jobs:
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
     - name: upgrade
-      run: az extension update --name ssh
+      run: az extension add -n ssh
       
     - name: Azure Login
       run: az login -u "hossein.hajjari@klm.com" -p "Tebyan@20100000"

@@ -7,6 +7,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     
+    
     steps:
+
+    - name: Install Azure CLI
+      run: |
+        curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
     - name: Azure Login
       run: az login -u "hossein.hajjari@klm.com" -p "Tebyan@20100000"
